@@ -45,7 +45,9 @@ before_script:
   - pip install -e .
 
 script:
-  - py.test -v -s --cov=integrate/ --durations=5
+  # Make sure the --cov variable is the name of the current package
+  - py.test -v -s
+  #- py.test -v -s --cov=shape/ --durations=5
 
 notifications:
   email: false
